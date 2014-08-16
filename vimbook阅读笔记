@@ -1,0 +1,75 @@
+vimbook阅读笔记：
+
+vim:
+U:撤销一行
+ZZ:保存并退出文件
+o:新增一行（经常用，但是想不起来）
+:help   ctrl+]打开链接（vim里面，超链接专门术语是tag）、ctrl+T返回(tag出栈)。
+数字使用： 3aX  10j 3x
+vimtutor
+w 、b、3w、3b 向前向后移动一个单词。
+n$ 移到第n行的末尾  
+^移到第一个非空格的地方
+5f+空格 移动n个空格
+F向左搜索
+f+char跳到指定的单词
+t+char跳到前一个单词
+nG跳到第n行。不加n跳到文件末尾
+ctrl+g 显示当前光标的状态：第几行、文件名
+d3w删除三个单词
+d$删除到行末尾的内容
+cw 替换一个单词 c$或C 替换到行尾
+.   repeat last change (非常强大。如删除所有的B标签。)
+r 替换光标当前所在的单词。5rx
+~ 更改大小写 n~
+keyboard macors 键盘宏。q
+交换俩单词位置：
+x p
+
+Deletes the character ‘e’ and places it in a register. Puts the text after the cursor, which is on the ‘h’.
+
+filter:  格式：! motion command
+
+如，对文件前10行排序 !10Gsort   !! 命令，对整个文件进行过滤。如 !!ls 或!!date
+
+split 分屏
+
+n split 创建一个n行的屏幕
+
+如果编辑的文件类型vim不识别：:set filetype=c
+
+ n >> 移动n行 配合.使用，多行多次移动
+
+=% 缩进一个函数的内容。
+
+同文件查找函数定义的位置：gd
+
+>i{ 移动括号内的内容
+
+>%移动括号以及括号中的内容
+
+vim -x 编辑文件，加密
+
+vim —help 
+
+vim:多文件操作之多文件替换
+
+  cat change.vim
+
+  :%s/person/xushengbin/g
+
+  :write
+
+  :quit
+
+
+
+
+
+
+
+ 
+
+
+
+
