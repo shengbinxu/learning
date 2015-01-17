@@ -11,7 +11,7 @@
 
 ```
 #!/bin/sh
-#检测端口是够被占用。如fpm的9000端口如果被占用，所有fpm已经启动，此时，可以选择重启fpm。
+#检测某个端口是够被占用。如fpm的9000端口如果被占用，所有fpm已经启动，此时，可以选择重启fpm。
 function check_port_if_has_opened()
 {
   if [ -z $1 ] ; then
